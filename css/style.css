@@ -14,26 +14,182 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+*{
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; ;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;	
+}
+
 /* VARIÁVEIS */
 :root{
-  
+  --back-color: #141414;
+  --letter-color: grey;
+  --hover-color: white;
 }
 
 /*BODY*/
-	body{
+body{
+	background-color: var(--back-color) ;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+    justify-content: center;
 
-	}
+
+}
+
+.lista-usuarios {
+    list-style: none;
+	display: flex;
+
+}	
+
+.lista-usuarios img{
+	width: 186px;
+	border: var(--back-color) solid;
+}
+
+.est-userbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.addperfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+	margin-left: 12px;
+}
+
+.lista-usuarios li h3{
+    margin-top: -15px; 
+}
+
+.lista-usuarios li img:hover{
+	border: var(--hover-color) solid;
+}
+
+.lista-usuarios li:hover{
+	color: var(--hover-color);
+}
+
+.lista-usuarios li #addperfil-img:hover{
+	border: var(--hover-color) solid;
+}
+
+
+#addperfil-img{
+    width: 95px;
+    margin-top: 53px;
+    border: var(--back-color) solid;
+    border-radius: 70px;
+}
+
+h2{
+    width: 858px;
+    display: flex;
+    justify-content: center;
+    font-size: 63px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+	color: var(--hover-color)
+}
+
+figcaption{
+    visibility: hidden;
+}
 
 /*TOPO*/
-	header.topo{
-		
-	}
+.topo img{
+	width: 7%;		
+}
 
 /*RODAPÉ*/
+
+footer{
+display: flex;
+justify-content: center;
+}
+
+.footer-button{
+	width: 320px;
+    height: 50px;
+    font-size: 25px;
+    background: var(--back-color);
+    color: var(--letter-color);
+    margin-left: 28px;
+    margin-top: 115px;
+	border: var(--letter-color) solid;
+}
+
+footer button:hover{
+    color: var(--hover-color);
+	border: var(--hover-color) solid;
+}
 	
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
-		
-	}
+div.pg-home{
+	color: var(--letter-color);
+	max-width: 858px;
+    margin: 0 auto;
+	padding-top: 50px;	
+}
+
+.background{
+	width: 1500px;
+	margin-top: 25px;
+}
+
+@media screen and  (max-width: 768px) {
+    div.pg-home{
+        color: var(--letter-color);
+        max-width: 1220px;
+        margin: 0 auto;
+        padding-top: 50px;	
+    }
+
+
+
+    .topo img {
+        width: 20%;
+        position: absolute;
+        left: 10px;
+    }
+
+    .footer-button {
+        width: 230px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 435px;
+    }
+
+    .addperfil {
+        margin-right: 70px;
+    }
+
+    .est-userbox {
+        margin-right: 67px;
+    }
+
+    h2 {
+        flex-wrap: wrap;
+        padding-right: 400px;
+        margin-left: 650px;
+        font-size: 63px;
+    }
+
+    .lista-usuarios {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-left: 500px;
+    }
+}
+
 
